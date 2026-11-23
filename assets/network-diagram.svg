@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" role="img" aria-labelledby="title desc">
+  <title id="title">Small routed network</title>
+  <desc id="desc">PC-A connects to switch S1, which connects to router R1, which connects to network 10.20.0.0 slash 16.</desc>
+  <defs><style>.box{fill:#1b2334;stroke:#7c86ff;stroke-width:3}.txt{fill:#eef1ff;font:600 18px Arial}.sub{fill:#9aa5bd;font:15px Arial}.line{stroke:#59d69b;stroke-width:4}</style></defs>
+  <rect width="760" height="250" rx="20" fill="#111622"/>
+  <path class="line" d="M145 125H260M385 125H500M625 125H700"/>
+  <rect class="box" x="25" y="75" width="120" height="100" rx="14"/><text class="txt" x="85" y="115" text-anchor="middle">PC-A</text><text class="sub" x="85" y="143" text-anchor="middle">192.168.10.25</text>
+  <rect class="box" x="260" y="75" width="125" height="100" rx="14"/><text class="txt" x="322" y="115" text-anchor="middle">Switch S1</text><text class="sub" x="322" y="143" text-anchor="middle">Layer 2</text>
+  <rect class="box" x="500" y="75" width="125" height="100" rx="14"/><text class="txt" x="562" y="115" text-anchor="middle">Router R1</text><text class="sub" x="562" y="143" text-anchor="middle">Default gateway</text>
+  <circle class="box" cx="710" cy="125" r="43"/><text class="txt" x="710" y="120" text-anchor="middle">WAN</text><text class="sub" x="710" y="143" text-anchor="middle">10.20.0.0/16</text>
+</svg>

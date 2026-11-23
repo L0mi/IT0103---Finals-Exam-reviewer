@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive CCNA 200-301 ENSA v7.0 quiz reviewer.">
+  <title>CCNA 200-301 Interactive Quiz Reviewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand-button" id="homeButton" type="button" aria-label="Return to main menu">
+        <span class="brand-mark">C</span>
+        <span><strong>CCNA Reviewer</strong><small>ENSA v7.0</small></span>
+      </button>
+      <button class="icon-button" id="soundButton" type="button" aria-label="Toggle feedback sounds" title="Toggle feedback sounds">♪</button>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <section class="screen center-screen" id="loadingScreen">
+        <div class="loader" aria-hidden="true"></div>
+        <p>Loading the question bank…</p>
+      </section>
+
+      <section class="screen hidden" id="menuScreen">
+        <div class="hero">
+          <div class="eyebrow">Certification practice • No timer</div>
+          <h1>CCNA 200-301<br><span>Interactive Quiz Reviewer</span></h1>
+          <p>Enterprise Networking, Security, and Automation (ENSA v7.0)</p>
+          <div class="availability"><span id="questionCount">0</span> original practice questions available</div>
+        </div>
+
+        <div class="mode-grid" id="modeGrid" aria-label="Choose a quiz length"></div>
+
+        <div class="menu-actions">
+          <button class="button primary large" id="startButton" type="button">Start Quiz <span>→</span></button>
+          <button class="button secondary hidden" id="continueButton" type="button">Continue Previous Quiz</button>
+          <button class="button ghost hidden" id="resetButton" type="button">Reset Saved Progress</button>
+        </div>
+
+        <div class="study-card">
+          <div><span class="study-icon">⌕</span><div><h2>Question Bank Reviewer</h2><p>Browse answers and explanations without affecting your score.</p></div></div>
+          <button class="button secondary" id="bankButton" type="button">Open Reviewer</button>
+        </div>
+
+        <details class="instructions">
+          <summary>How the quiz works</summary>
+          <ul>
+            <li>You get two scored attempts for every question.</li>
+            <li>A wrong first attempt resets your streak but does not reveal the answer.</li>
+            <li>After two wrong attempts, select the revealed correct answer to continue.</li>
+            <li>Your quiz order and progress are saved automatically on this browser.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="screen hidden" id="quizScreen">
+        <div class="quiz-header">
+          <div>
+            <span class="eyebrow" id="quizModeLabel">Practice quiz</span>
+            <h1 id="questionPosition">Question 1 of 20</h1>
+          </div>
+          <button class="button ghost compact" id="exitQuizButton" type="button">Save & Exit</button>
+        </div>
+        <div class="progress-track" aria-label="Quiz progress"><div id="progressBar"></div></div>
+
+        <div class="stats-grid" aria-label="Quiz statistics">
+          <div><span>Current streak</span><strong id="currentStreak">0 🔥</strong></div>
+          <div><span>Best streak</span><strong id="bestStreak">0 🏆</strong></div>
+          <div><span>First-try correct</span><strong id="firstTryCount">0</strong></div>
+          <div><span>Incorrect first tries</span><strong id="incorrectFirstCount">0</strong></div>
+        </div>
+
+        <article class="question-card" id="questionCard">
+          <div class="question-meta">
+            <span id="questionTypeBadge">Single answer</span>
+            <span id="attemptBadge">Attempt 1 of 2</span>
+          </div>
+          <h2 id="questionText"></h2>
+          <img class="question-image hidden" id="questionImage" alt="Question diagram">
+          <p class="selection-help hidden" id="selectionHelp"></p>
+          <form id="answerForm"><fieldset id="optionsList"></fieldset></form>
+          <div class="feedback hidden" id="feedback" role="status" aria-live="polite"></div>
+          <div class="question-actions">
+            <button class="button primary" id="submitButton" type="submit" form="answerForm">Submit Answer</button>
+            <button class="button success hidden" id="nextButton" type="button">Next Question →</button>
+          </div>
+        </article>
+        <p class="shortcut-hint">Keyboard: press 1–6 to select, Enter to submit or continue.</p>
+      </section>
+
+      <section class="screen hidden" id="resultsScreen">
+        <div class="results-hero">
+          <div class="completion-mark">✓</div>
+          <span class="eyebrow">Session complete</span>
+          <h1>Quiz Completed!</h1>
+          <p>Your first-attempt accuracy is <strong id="accuracyText">0%</strong></p>
+        </div>
+        <div class="results-layout">
+          <div class="score-ring" id="scoreRing"><div><strong id="scorePercent">0%</strong><span>First-try<br>accuracy</span></div></div>
+          <div class="result-stats">
+            <div><span>Total questions</span><strong id="resultTotal">0</strong></div>
+            <div class="green"><span>Correct on first try</span><strong id="resultFirst">0</strong></div>
+            <div class="blue"><span>Correct on second try</span><strong id="resultSecond">0</strong></div>
+            <div class="red"><span>Incorrect after two tries</span><strong id="resultMissed">0</strong></div>
+            <div class="purple"><span>Best streak</span><strong id="resultStreak">0</strong></div>
+          </div>
+        </div>
+        <div class="breakdown" id="breakdownBar" aria-label="Answer result breakdown"></div>
+        <div class="result-actions">
+          <button class="button primary" id="reviewAllButton" type="button">Review All Answers</button>
+          <button class="button secondary" id="reviewMistakesButton" type="button">Review Mistakes</button>
+          <button class="button secondary" id="retryButton" type="button">Retry Quiz</button>
+          <button class="button ghost" id="resultsHomeButton" type="button">Return to Main Menu</button>
+        </div>
+      </section>
+
+      <section class="screen hidden" id="reviewScreen">
+        <div class="page-heading">
+          <div><span class="eyebrow" id="reviewEyebrow">Completed session</span><h1 id="reviewTitle">Review Answers</h1></div>
+          <button class="button ghost compact" id="reviewBackButton" type="button">← Back</button>
+        </div>
+        <div class="review-toolbar">
+          <label class="search-box"><span>⌕</span><input id="reviewSearch" type="search" placeholder="Search questions…" aria-label="Search questions"></label>
+          <select id="reviewFilter" aria-label="Filter reviewed questions"></select>
+          <input class="number-filter hidden" id="numberFilter" type="number" min="1" placeholder="Question #" aria-label="Filter by question number">
+          <button class="button secondary compact" id="answerToggle" type="button">Hide Answers</button>
+          <button class="button secondary compact" id="expandButton" type="button">Expand All</button>
+        </div>
+        <p class="review-count" id="reviewCount"></p>
+        <div class="review-list" id="reviewList"></div>
+        <div class="empty-state hidden" id="emptyReview"><strong>No questions found</strong><p>Try changing the search or filter.</p></div>
+      </section>
+
+      <section class="screen center-screen hidden" id="errorScreen">
+        <div class="error-mark">!</div><h1>Question bank unavailable</h1>
+        <p id="errorMessage">The questions could not be loaded.</p>
+        <button class="button primary" type="button" onclick="location.reload()">Try Again</button>
+      </section>
+    </main>
+
+    <footer><span>Original educational practice content</span><span>Progress stays on this device</span></footer>
+  </div>
+  <div class="streak-toast hidden" id="streakToast" role="status">🔥 5-answer streak! Great work!</div>
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
