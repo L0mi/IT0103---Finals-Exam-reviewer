@@ -4,12 +4,26 @@
     "question": "What is the turnaround time of Process C?",
     "type": "single",
     "options": [
-      {"id": "A", "text": "11 ms"},
-      {"id": "B", "text": "12 ms"},
-      {"id": "C", "text": "3 ms"},
-      {"id": "D", "text": "20 ms"}
+      {
+        "id": "A",
+        "text": "11 ms"
+      },
+      {
+        "id": "B",
+        "text": "12 ms"
+      },
+      {
+        "id": "C",
+        "text": "3 ms"
+      },
+      {
+        "id": "D",
+        "text": "20 ms"
+      }
     ],
-    "correctAnswers": ["A"],
+    "correctAnswers": [
+      "A"
+    ],
     "explanation": "The supplied IT0035 reviewer records 11 ms as the answer.",
     "image": null,
     "source": "IT0035 Formatives and Seatworks Reviewer document",
@@ -20,12 +34,26 @@
     "question": "What is the waiting time of Process C?",
     "type": "single",
     "options": [
-      {"id": "A", "text": "12 ms"},
-      {"id": "B", "text": "9 ms"},
-      {"id": "C", "text": "13 ms"},
-      {"id": "D", "text": "8 ms"}
+      {
+        "id": "A",
+        "text": "12 ms"
+      },
+      {
+        "id": "B",
+        "text": "9 ms"
+      },
+      {
+        "id": "C",
+        "text": "13 ms"
+      },
+      {
+        "id": "D",
+        "text": "8 ms"
+      }
     ],
-    "correctAnswers": ["C"],
+    "correctAnswers": [
+      "C"
+    ],
     "explanation": "The supplied IT0035 reviewer records 13 ms as the answer.",
     "image": null,
     "source": "IT0035 Formatives and Seatworks Reviewer document",
@@ -36,16 +64,1182 @@
     "question": "For the reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 with three frames, how many hits occur using Least Recently Used page replacement?",
     "type": "single",
     "options": [
-      {"id": "A", "text": "7 hits"},
-      {"id": "B", "text": "8 hits"},
-      {"id": "C", "text": "5 hits"},
-      {"id": "D", "text": "6 hits"},
-      {"id": "E", "text": "4 hits"}
+      {
+        "id": "A",
+        "text": "7 hits"
+      },
+      {
+        "id": "B",
+        "text": "8 hits"
+      },
+      {
+        "id": "C",
+        "text": "5 hits"
+      },
+      {
+        "id": "D",
+        "text": "6 hits"
+      },
+      {
+        "id": "E",
+        "text": "4 hits"
+      }
     ],
-    "correctAnswers": ["E"],
+    "correctAnswers": [
+      "E"
+    ],
     "explanation": "The supplied reviewer notes that recalculation gives 4 hits, which was absent from the originally recorded choices. It is included here so the quiz can be answered correctly.",
     "image": null,
     "source": "IT0035 Formatives and Seatworks Reviewer document",
     "category": "Page Replacement"
+  },
+  {
+    "id": 4,
+    "question": "Given requests 39, 14, 38, and 17 with the initial head at track 10 on a 100-track disk, which track is served first using SSTF?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "17"
+      },
+      {
+        "id": "C",
+        "text": "38"
+      },
+      {
+        "id": "D",
+        "text": "39"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Track 14 is only 4 tracks away from the initial head at 10, so SSTF serves it first.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 5,
+    "question": "Given requests 98, 53, 22, 16, and 24 with the initial head at track 32, which request is served first using LOOK toward higher tracks?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "99"
+      },
+      {
+        "id": "B",
+        "text": "53"
+      },
+      {
+        "id": "C",
+        "text": "98"
+      },
+      {
+        "id": "D",
+        "text": "24"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "LOOK first moves upward from 32. Of the pending higher-numbered requests, 53 is the closest and is served first.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 6,
+    "question": "Given requests 98, 53, 22, 16, and 24 with the initial head at track 32, which track is served first using SSTF?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "98"
+      },
+      {
+        "id": "B",
+        "text": "53"
+      },
+      {
+        "id": "C",
+        "text": "22"
+      },
+      {
+        "id": "D",
+        "text": "24"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Track 24 is 8 tracks away from 32, which is the smallest seek among the pending requests.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 7,
+    "question": "Using LOOK toward higher tracks for requests 98, 53, 22, 16, and 24, starting at track 32, what is the total head movement?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "98 tracks"
+      },
+      {
+        "id": "B",
+        "text": "148 tracks"
+      },
+      {
+        "id": "C",
+        "text": "132 tracks"
+      },
+      {
+        "id": "D",
+        "text": "180 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "The LOOK path is 32 to 53 to 98 to 24 to 22 to 16. Its movement is 21 + 45 + 74 + 2 + 6 = 148 tracks.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 8,
+    "question": "In FCFS disk scheduling for requests 98, 53, 22, 16, and 24 starting at track 32, which request is served first?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "98"
+      },
+      {
+        "id": "B",
+        "text": "53"
+      },
+      {
+        "id": "C",
+        "text": "22"
+      },
+      {
+        "id": "D",
+        "text": "24"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "FCFS serves requests in the order received, so the first listed request, track 98, is served first.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 9,
+    "question": "For requests 39, 14, 38, and 17 starting at track 10, which request is served last under SSTF?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "39"
+      },
+      {
+        "id": "B",
+        "text": "14"
+      },
+      {
+        "id": "C",
+        "text": "38"
+      },
+      {
+        "id": "D",
+        "text": "17"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "SSTF serves the requests in the order 14, 17, 38, 39, so track 39 is last. The supplied reviewer highlights 38, but recalculation gives 39.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document; answer recalculated",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 10,
+    "question": "True or False: C-SCAN returns to the opposite end of the disk without servicing requests during the return.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "C-SCAN services requests in one direction, then returns to the other end without servicing requests on the return trip.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 11,
+    "question": "True or False: SSTF chooses the request requiring the minimum seek from the current head position.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Shortest Seek Time First selects the pending request closest to the current head position.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 12,
+    "question": "In a disk, information is recorded on the ____.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "surface"
+      },
+      {
+        "id": "B",
+        "text": "spindle"
+      },
+      {
+        "id": "C",
+        "text": "controller board"
+      },
+      {
+        "id": "D",
+        "text": "cache"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A magnetic disk records information on the surfaces of its platters.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 13,
+    "question": "The system stores information on the sector under the read-write head by recording it ____.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "magnetically"
+      },
+      {
+        "id": "B",
+        "text": "optically"
+      },
+      {
+        "id": "C",
+        "text": "thermally"
+      },
+      {
+        "id": "D",
+        "text": "mechanically"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A hard disk stores data by magnetically encoding the sector under the read-write head.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 14,
+    "question": "Each disk platter has a flat ____ shape, like a phonograph record.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "circular"
+      },
+      {
+        "id": "B",
+        "text": "rectangular"
+      },
+      {
+        "id": "C",
+        "text": "triangular"
+      },
+      {
+        "id": "D",
+        "text": "spiral"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A platter is a flat circular disk.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 15,
+    "question": "What term describes the time needed to move the read-write head to the correct track?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Seek time"
+      },
+      {
+        "id": "B",
+        "text": "Rotational latency"
+      },
+      {
+        "id": "C",
+        "text": "Transfer time"
+      },
+      {
+        "id": "D",
+        "text": "Access cycle"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Seek time is the time required to position the read-write head over the desired track.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 16,
+    "question": "What rotation-speed range is given for a typical hard disk in the reviewer?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "4,500 to 7,200 RPM"
+      },
+      {
+        "id": "B",
+        "text": "500 to 1,200 RPM"
+      },
+      {
+        "id": "C",
+        "text": "10,000 to 20,000 RPM"
+      },
+      {
+        "id": "D",
+        "text": "100 to 500 RPM"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The supplied reviewer gives a typical range of 4,500 to 7,200 RPM.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 17,
+    "question": "Which storage device provides the bulk of secondary storage for modern computer systems?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Magnetic disk"
+      },
+      {
+        "id": "B",
+        "text": "CPU register"
+      },
+      {
+        "id": "C",
+        "text": "Cache memory"
+      },
+      {
+        "id": "D",
+        "text": "Optical sensor"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The reviewer identifies the magnetic disk as the main source of bulk secondary storage.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 18,
+    "question": "Which disk recording method keeps the number of bits per track uniform, with a constant number of sectors per track?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Constant Angular Velocity"
+      },
+      {
+        "id": "B",
+        "text": "Constant Linear Velocity"
+      },
+      {
+        "id": "C",
+        "text": "Variable Seek Velocity"
+      },
+      {
+        "id": "D",
+        "text": "First Come First Served"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "In the supplied material, Constant Angular Velocity uses a uniform number of sectors per track.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 19,
+    "question": "What incident occurs when a disk head contacts the surface and scrapes recording material from the disk?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Head crash"
+      },
+      {
+        "id": "B",
+        "text": "Seek delay"
+      },
+      {
+        "id": "C",
+        "text": "Track overflow"
+      },
+      {
+        "id": "D",
+        "text": "Sector rotation"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A head crash happens when the read-write head touches and damages the disk surface.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 20,
+    "question": "According to the reviewer, what is the usual size of a logical block?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "512 bytes"
+      },
+      {
+        "id": "B",
+        "text": "128 bytes"
+      },
+      {
+        "id": "C",
+        "text": "1,024 bytes"
+      },
+      {
+        "id": "D",
+        "text": "4,096 bytes"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The supplied reviewer identifies 512 bytes as the usual logical-block size.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 21,
+    "question": "Which disk system has a separate read-write head for every track?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fixed-head system"
+      },
+      {
+        "id": "B",
+        "text": "Moving-head system"
+      },
+      {
+        "id": "C",
+        "text": "Optical-drive system"
+      },
+      {
+        "id": "D",
+        "text": "Virtual-memory system"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A fixed-head system provides a separate read-write head for each track.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 22,
+    "question": "True or False: C-SCAN scheduling treats the disk as circular, with the last track adjacent to the first track.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "C-SCAN conceptually treats the disk as circular so service continues in one direction after wrapping around.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 23,
+    "question": "True or False: SSTF selects the request with the maximum seek time from the current head position.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "SSTF selects the request with the minimum seek time, so the statement is false.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 24,
+    "question": "True or False: FCFS disk scheduling selects requests according to their order in the disk queue.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "First Come First Served processes requests in queue-arrival order.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 25,
+    "question": "For requests 39, 14, 38, and 17 starting at track 10, what is the total head movement using LOOK toward higher tracks?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "29 tracks"
+      },
+      {
+        "id": "B",
+        "text": "39 tracks"
+      },
+      {
+        "id": "C",
+        "text": "27 tracks"
+      },
+      {
+        "id": "D",
+        "text": "99 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "LOOK moves upward through 14, 17, 38, and 39. The total movement is 39 - 10 = 29 tracks.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 26,
+    "question": "Which strategy does not belong to the key property \"Recovery of essential and full services after attack\"?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Authentication"
+      },
+      {
+        "id": "B",
+        "text": "Contingency planning"
+      },
+      {
+        "id": "C",
+        "text": "Data replication"
+      },
+      {
+        "id": "D",
+        "text": "System backup and restoration"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Authentication is a resistance or access-control strategy, while the other options support service recovery.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 27,
+    "question": "Which option does not belong to the key property \"Recovery of essential and full services after attack\"?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Authentication"
+      },
+      {
+        "id": "B",
+        "text": "All of these"
+      },
+      {
+        "id": "C",
+        "text": "Intrusion detection"
+      },
+      {
+        "id": "D",
+        "text": "Encryption"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Authentication, intrusion detection, and encryption do not directly provide recovery of essential and full services, so the supplied answer is All of these.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 28,
+    "question": "What is the relative risk of a LAN connected to the internet?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "None of these"
+      },
+      {
+        "id": "B",
+        "text": "Medium"
+      },
+      {
+        "id": "C",
+        "text": "Low"
+      },
+      {
+        "id": "D",
+        "text": "High"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "The supplied reviewer classifies an internet-connected LAN as high risk.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 29,
+    "question": "True or False: Sniffers are not a vulnerability of a LAN connected to the internet.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Sniffers can capture network traffic and are a vulnerability, so the statement is false.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 30,
+    "question": "What is the relative risk of a LAN connected without internet access?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "High"
+      },
+      {
+        "id": "B",
+        "text": "Low"
+      },
+      {
+        "id": "C",
+        "text": "None of these"
+      },
+      {
+        "id": "D",
+        "text": "Medium"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "The supplied reviewer classifies a LAN without internet access as medium risk.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 31,
+    "question": "True or False: Windows 10 is an example of a hand-held operating system.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Windows 10 is a desktop operating system in this context, not a hand-held operating system.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 32,
+    "question": "Which strategy supports the key property \"Recovery of essential and full services after attack\"?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Encryption"
+      },
+      {
+        "id": "B",
+        "text": "Access controls"
+      },
+      {
+        "id": "C",
+        "text": "Contingency planning"
+      },
+      {
+        "id": "D",
+        "text": "Integrity checking"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Contingency planning prepares an organization to restore essential services after an attack.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 33,
+    "question": "Written policies and procedures and ____ user training are essential elements of system management.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Occasional"
+      },
+      {
+        "id": "B",
+        "text": "Random"
+      },
+      {
+        "id": "C",
+        "text": "Regular"
+      },
+      {
+        "id": "D",
+        "text": "Accidental"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Regular user training helps ensure that security policies and procedures are understood and followed.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 34,
+    "question": "Which is a vulnerability of a LAN connected to the internet?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Viruses"
+      },
+      {
+        "id": "B",
+        "text": "E-mail"
+      },
+      {
+        "id": "C",
+        "text": "Spoofing"
+      },
+      {
+        "id": "D",
+        "text": "All of these"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "The reviewer identifies viruses, e-mail, and spoofing as vulnerabilities, so All of these is correct.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 35,
+    "question": "Which strategy supports the key property \"Resistance to attacks\"?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Intrusion detecting"
+      },
+      {
+        "id": "B",
+        "text": "Contingency planning"
+      },
+      {
+        "id": "C",
+        "text": "Authentication"
+      },
+      {
+        "id": "D",
+        "text": "Intrusion recognition patterns"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Authentication helps resist attacks by verifying the identity of users or systems before granting access.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 36,
+    "question": "True or False: Spear-phishing is a form of phishing that targets a particular employee or organization member.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Spear-phishing uses tailored messages aimed at a specific target.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 37,
+    "question": "Which type of virus or malicious code is triggered at a specific time?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Logic Bomb"
+      },
+      {
+        "id": "B",
+        "text": "Time Bomb"
+      },
+      {
+        "id": "C",
+        "text": "Suicide Bomb"
+      },
+      {
+        "id": "D",
+        "text": "Trojan virus"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "A time bomb is designed to activate at a specified time.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 38,
+    "question": "True or False: Ransomware is similar to smishing because victims receive a voice message directing them to a phone number or website.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Voice-based phishing is vishing, not ransomware, so the statement is false.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 39,
+    "question": "True or False: A boot-sector virus infects the boot record or system area of a floppy disk or hard drive.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A boot-sector virus targets the boot record or system area of a storage device.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 40,
+    "question": "What term refers to using discarded disks, CDs, printouts, or similar materials to obtain system information?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Wire Tapping"
+      },
+      {
+        "id": "B",
+        "text": "Trap doors"
+      },
+      {
+        "id": "C",
+        "text": "Trash Collection"
+      },
+      {
+        "id": "D",
+        "text": "Denial of Service attack"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Trash collection involves searching discarded materials for information that can help compromise a system.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 41,
+    "question": "True or False: Antivirus software can remove every impurity or threat from a computer.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Antivirus software cannot guarantee removal of every possible threat, so the statement is false.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 42,
+    "question": "True or False: Sniffers are programs that reside on computers attached to a network.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Sniffers monitor or capture network traffic from a connected computer.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 43,
+    "question": "True or False: Vishing is similar to smishing, but victims receive a voice message telling them to call a number or access a website.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Vishing is voice-based phishing and commonly uses calls or voice messages.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 44,
+    "question": "True or False: A worm is an example of a blended threat.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The supplied reviewer marks this statement as true.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 45,
+    "question": "What is the act of disguising a communication from an unknown source as if it came from a known, trusted source?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Blended Threat"
+      },
+      {
+        "id": "B",
+        "text": "Sniffers"
+      },
+      {
+        "id": "C",
+        "text": "Spoofing"
+      },
+      {
+        "id": "D",
+        "text": "Spyware"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Spoofing disguises a communication or identity so it appears to come from a trusted source.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "category": "Protection and Security"
   }
 ]
+
