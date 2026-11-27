@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "question": "What is the turnaround time of Process C?",
+    "type": "single",
+    "options": [
+      {"id": "A", "text": "11 ms"},
+      {"id": "B", "text": "12 ms"},
+      {"id": "C", "text": "3 ms"},
+      {"id": "D", "text": "20 ms"}
+    ],
+    "correctAnswers": ["A"],
+    "explanation": "The supplied IT0035 reviewer records 11 ms as the answer.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 2,
+    "question": "What is the waiting time of Process C?",
+    "type": "single",
+    "options": [
+      {"id": "A", "text": "12 ms"},
+      {"id": "B", "text": "9 ms"},
+      {"id": "C", "text": "13 ms"},
+      {"id": "D", "text": "8 ms"}
+    ],
+    "correctAnswers": ["C"],
+    "explanation": "The supplied IT0035 reviewer records 13 ms as the answer.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 3,
+    "question": "For the reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 with three frames, how many hits occur using Least Recently Used page replacement?",
+    "type": "single",
+    "options": [
+      {"id": "A", "text": "7 hits"},
+      {"id": "B", "text": "8 hits"},
+      {"id": "C", "text": "5 hits"},
+      {"id": "D", "text": "6 hits"},
+      {"id": "E", "text": "4 hits"}
+    ],
+    "correctAnswers": ["E"],
+    "explanation": "The supplied reviewer notes that recalculation gives 4 hits, which was absent from the originally recorded choices. It is included here so the quiz can be answered correctly.",
+    "image": null,
+    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "category": "Page Replacement"
+  }
+]

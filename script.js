@@ -1,12 +1,16 @@
 "use strict";
 
-const STORAGE_KEY = "ccnaEnsaReviewerSessionV1";
+const SESSION_PREFIX = "ultiReviewerSessionV1:";
+const LEGACY_STORAGE_KEY = "ccnaEnsaReviewerSessionV1";
 const SOUND_KEY = "ccnaEnsaReviewerSoundV1";
 
 const app = {
+  courses: [],
+  activeCourse: null,
   questions: [],
   byId: new Map(),
-  selectedMode: "20",
+  selectedMode: "all",
+  quizType: "all",
   allShuffle: false,
   session: null,
   reviewContext: "bank",
@@ -16,7 +20,7 @@ const app = {
 };
 
 const $ = (id) => document.getElementById(id);
-const screens = ["loadingScreen", "menuScreen", "quizScreen", "resultsScreen", "reviewScreen", "errorScreen"];
+const screens = ["loadingScreen", "subjectsScreen", "menuScreen", "quizScreen", "resultsScreen", "reviewScreen", "errorScreen"];
 
 document.addEventListener("DOMContentLoaded", initialize);
 
@@ -25,27 +29,12 @@ async function initialize() {
   updateSoundButton();
 
   try {
-    let data;
-    if (location.protocol === "file:" && Array.isArray(window.QUESTION_BANK)) {
-      data = window.QUESTION_BANK;
-    } else {
-      try {
-        const response = await fetch("questions.json", { cache: "no-store" });
-        if (!response.ok) throw new Error(`The server returned ${response.status}.`);
-        data = await response.json();
-      } catch (fetchError) {
-        if (!Array.isArray(window.QUESTION_BANK)) throw fetchError;
-        data = window.QUESTION_BANK;
-      }
-    }
-    validateQuestionBank(data);
-    app.questions = data;
-    app.byId = new Map(data.map((question) => [question.id, question]));
-    app.session = loadSession();
-    renderMenu();
-    showScreen("menuScreen");
+    if (!Array.isArray(window.ULTI_COURSES) || window.ULTI_COURSES.length === 0) throw new Error("The course catalog is missing.");
+    app.courses = window.ULTI_COURSES;
+    renderSubjects();
+    showScreen("subjectsScreen");
   } catch (error) {
-    $("errorMessage").textContent = `Check questions.json and questions.js, then try again. ${error.message}`;
+    $("errorMessage").textContent = `Check course-data.js and the course question files, then try again. ${error.message}`;
     showScreen("errorScreen");
     console.error(error);
   }
@@ -70,7 +59,8 @@ function validateQuestionBank(data) {
 }
 
 function bindEvents() {
-  $("homeButton").addEventListener("click", returnHome);
+  $("homeButton").addEventListener("click", showSubjects);
+  $("changeSubjectButton").addEventListener("click", showSubjects);
   $("soundButton").addEventListener("click", toggleSound);
   $("startButton").addEventListener("click", startQuiz);
   $("continueButton").addEventListener("click", continueQuiz);
@@ -98,17 +88,112 @@ function showScreen(screenId) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function renderSubjects() {
+  const totalQuestions = app.courses.reduce((total, course) => total + course.questions.length, 0);
+  $("subjectSummary").textContent = `${app.courses.length} subjects • ${totalQuestions} available questions`;
+  $("subjectGrid").innerHTML = app.courses.map((course) => {
+    const saved = readStoredSession(course.id);
+    const progress = saved ? saved.completed ? "Last quiz completed" : `Saved quiz: ${saved.currentIndex + 1}/${saved.order.length}` : "";
+    return `<button class="subject-card" type="button" data-course-id="${escapeHtml(course.id)}" style="--subject-accent:${escapeHtml(course.accent)}">
+      <span class="subject-icon">${escapeHtml(course.icon)}</span>
+      <span class="subject-code">${escapeHtml(course.code)}</span>
+      <h2>${escapeHtml(course.name)}</h2>
+      <span class="subject-subtitle">${escapeHtml(course.subtitle)}</span>
+      <p>${escapeHtml(course.description)}</p>
+      ${course.note ? `<span class="subject-note">${escapeHtml(course.note)}</span>` : ""}
+      ${progress ? `<span class="subject-progress">${escapeHtml(progress)}</span>` : ""}
+      <span class="subject-card-footer"><span class="subject-count">${course.questions.length} questions</span><span class="subject-arrow">→</span></span>
+    </button>`;
+  }).join("");
+  document.querySelectorAll(".subject-card").forEach((card) => card.addEventListener("click", () => selectCourse(card.dataset.courseId)));
+}
+
+async function selectCourse(courseId) {
+  const course = app.courses.find((item) => item.id === courseId);
+  if (!course) return;
+  showScreen("loadingScreen");
+  try {
+    const data = await loadCourseQuestions(course);
+    const prepared = data.map((question) => ({ ...question, category: question.category || networkCategory(question.id) }));
+    validateQuestionBank(prepared);
+    app.activeCourse = course;
+    app.questions = prepared;
+    app.byId = new Map(prepared.map((question) => [question.id, question]));
+    app.quizType = "all";
+    app.selectedMode = String(course.modes[0]);
+    app.session = loadSession();
+    document.title = `${course.code} ${course.name} • ULTI REVIEWER`;
+    renderMenu();
+    showScreen("menuScreen");
+  } catch (error) {
+    $("errorMessage").textContent = `Could not load ${course.code}. ${error.message}`;
+    showScreen("errorScreen");
+    console.error(error);
+  }
+}
+
+async function loadCourseQuestions(course) {
+  if (location.protocol !== "file:") {
+    try {
+      const response = await fetch(course.jsonPath, { cache: "no-store" });
+      if (!response.ok) throw new Error(`The server returned ${response.status}.`);
+      return await response.json();
+    } catch (error) {
+      if (!Array.isArray(course.questions)) throw error;
+    }
+  }
+  if (!Array.isArray(course.questions)) throw new Error("No local fallback question bank is available.");
+  return course.questions;
+}
+
+function networkCategory(id) {
+  if (id <= 10) return "Routing and OSPF";
+  if (id <= 20) return "Gateway and LAN Security";
+  if (id <= 27) return "Access Control Lists";
+  if (id <= 35) return "VPN and Wireless";
+  if (id <= 46) return "QoS and Network Services";
+  return "Automation and APIs";
+}
+
+function showSubjects() {
+  if (app.session && !app.session.completed) saveSession();
+  document.title = "ULTI REVIEWER";
+  renderSubjects();
+  showScreen("subjectsScreen");
+}
+
+function availableQuestions() {
+  return app.quizType === "all" ? app.questions : app.questions.filter((question) => question.category === app.quizType);
+}
+
 function renderMenu() {
-  $("questionCount").textContent = app.questions.length;
-  const modes = [
-    { id: "20", icon: "20", title: "20 Questions", text: "A quick randomized review session.", required: 20 },
-    { id: "50", icon: "50", title: "50 Questions", text: "A full-length randomized challenge.", required: 50 },
-    { id: "all", icon: "∞", title: "All Questions", text: `Study all ${app.questions.length} available questions.`, required: 1 }
-  ];
+  const pool = availableQuestions();
+  const course = app.activeCourse;
+  $("courseBreadcrumb").textContent = `${course.code} • ${course.name}`;
+  $("courseEyebrow").textContent = `${course.subtitle} • No timer`;
+  $("courseCodeTitle").textContent = course.code;
+  $("courseNameTitle").textContent = course.name;
+  $("courseSubtitle").textContent = course.description;
+  $("bankCardTitle").textContent = `${course.code} Question Bank`;
+  $("questionCount").textContent = pool.length;
+
+  const categories = [...new Set(app.questions.map((question) => question.category))];
+  $("quizTypeSelect").innerHTML = `<option value="all">Mixed Practice • All Topics</option>` + categories.map((category) => `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`).join("");
+  $("quizTypeSelect").value = app.quizType;
+  $("quizTypeSelect").onchange = (event) => {
+    app.quizType = event.target.value;
+    const newPool = availableQuestions();
+    if (app.selectedMode !== "all" && newPool.length < Number(app.selectedMode)) app.selectedMode = "all";
+    renderMenu();
+  };
+
+  const modes = course.modes.map((mode) => mode === "all"
+    ? { id: "all", icon: "∞", title: "All in Quiz Type", text: `Use all ${pool.length} questions in this quiz type.`, required: 1 }
+    : { id: String(mode), icon: String(mode), title: `${mode} Questions`, text: mode <= 10 ? "A focused quick review." : mode <= 20 ? "A standard practice session." : "A full-length randomized challenge.", required: mode });
 
   $("modeGrid").innerHTML = modes.map((mode) => {
-    const disabled = app.questions.length < mode.required;
-    const message = disabled ? `Only ${app.questions.length} questions are available; ${mode.required} are required.` : mode.text;
+    const disabled = pool.length < mode.required;
+    const message = disabled ? `Only ${pool.length} questions are available in this quiz type; ${mode.required} are required.` : mode.text;
     return `<button class="mode-card ${app.selectedMode === mode.id ? "selected" : ""}" type="button" data-mode="${mode.id}" ${disabled ? "disabled" : ""} aria-pressed="${app.selectedMode === mode.id}">
       <span class="mode-icon">${mode.icon}</span><span class="check">✓</span>
       <h2>${mode.title}</h2><p>${escapeHtml(message)}</p>
@@ -131,11 +216,12 @@ function renderMenu() {
 }
 
 function startQuiz() {
-  const count = app.selectedMode === "all" ? app.questions.length : Number(app.selectedMode);
-  if (app.questions.length < count) return;
+  const pool = availableQuestions();
+  const count = app.selectedMode === "all" ? pool.length : Number(app.selectedMode);
+  if (pool.length < count) return;
   if (app.session && !app.session.completed && !confirm("Start a new quiz and replace the saved session?")) return;
 
-  let ids = app.questions.map((question) => question.id);
+  let ids = pool.map((question) => question.id);
   if (app.selectedMode !== "all") ids = shuffle(ids).slice(0, count);
   else if (app.allShuffle) ids = shuffle(ids);
 
@@ -143,6 +229,8 @@ function startQuiz() {
   ids.forEach((id) => { optionOrders[id] = shuffle(app.byId.get(id).options.map((option) => option.id)); });
   app.session = {
     version: 1,
+    courseId: app.activeCourse.id,
+    category: app.quizType,
     mode: app.selectedMode,
     allShuffle: app.allShuffle,
     order: ids,
@@ -173,8 +261,16 @@ function continueQuiz() {
 }
 
 function loadSession() {
+  const storageKey = `${SESSION_PREFIX}${app.activeCourse.id}`;
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    let saved = JSON.parse(localStorage.getItem(storageKey));
+    if (!saved && app.activeCourse.id === "it0103") {
+      saved = JSON.parse(localStorage.getItem(LEGACY_STORAGE_KEY));
+      if (saved) {
+        saved.courseId = "it0103";
+        localStorage.setItem(storageKey, JSON.stringify(saved));
+      }
+    }
     if (!saved || saved.version !== 1 || !Array.isArray(saved.order)) return null;
     if (saved.order.some((id) => !app.byId.has(id))) return null;
     saved.records ||= {};
@@ -182,18 +278,26 @@ function loadSession() {
     saved.optionOrders ||= {};
     return saved;
   } catch {
-    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(storageKey);
     return null;
   }
 }
 
 function saveSession() {
-  if (app.session) localStorage.setItem(STORAGE_KEY, JSON.stringify(app.session));
+  if (app.session && app.activeCourse) localStorage.setItem(`${SESSION_PREFIX}${app.activeCourse.id}`, JSON.stringify(app.session));
+}
+
+function readStoredSession(courseId) {
+  try {
+    return JSON.parse(localStorage.getItem(`${SESSION_PREFIX}${courseId}`));
+  } catch {
+    return null;
+  }
 }
 
 function resetSavedProgress() {
   if (!confirm("Delete the saved quiz and all its progress?")) return;
-  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(`${SESSION_PREFIX}${app.activeCourse.id}`);
   app.session = null;
   renderMenu();
 }
@@ -216,7 +320,9 @@ function renderQuestion() {
   const selected = app.session.selections[question.id] || [];
   const required = question.correctAnswers.length;
 
-  $("quizModeLabel").textContent = app.session.mode === "all" ? "All Questions" : `${app.session.mode}-Question Quiz`;
+  const sessionType = app.session.category === "all" ? "Mixed Practice" : app.session.category;
+  const sessionLength = app.session.mode === "all" ? "All Questions" : `${app.session.mode}-Question Quiz`;
+  $("quizModeLabel").textContent = `${app.activeCourse.code} • ${sessionType} • ${sessionLength}`;
   $("questionPosition").textContent = `Question ${current} of ${total}`;
   $("progressBar").style.width = `${((current - 1) / total) * 100}%`;
   $("currentStreak").textContent = `${app.session.currentStreak} 🔥`;
@@ -399,11 +505,12 @@ function retryQuiz() {
   app.selectedMode = app.session.mode;
   const oldIds = [...app.session.order];
   const mode = app.session.mode;
+  const category = app.session.category || "all";
   const optionOrders = {};
   const ids = shuffle(oldIds);
   ids.forEach((id) => { optionOrders[id] = shuffle(app.byId.get(id).options.map((option) => option.id)); });
   app.session = {
-    version: 1, mode, allShuffle: true, order: ids, optionOrders, currentIndex: 0,
+    version: 1, courseId: app.activeCourse.id, category, mode, allShuffle: true, order: ids, optionOrders, currentIndex: 0,
     currentStreak: 0, bestStreak: 0, firstTryCorrect: 0, secondTryCorrect: 0,
     incorrectAfterTwo: 0, records: {}, selections: {}, completed: false, startedAt: new Date().toISOString()
   };
@@ -419,6 +526,7 @@ function exitQuiz() {
 }
 
 function returnHome() {
+  if (!app.activeCourse) return showSubjects();
   if (!$("quizScreen").classList.contains("hidden") && app.session && !app.session.completed) saveSession();
   renderMenu();
   showScreen("menuScreen");
@@ -432,13 +540,14 @@ function openReview(context) {
   $("reviewSearch").value = "";
   $("numberFilter").value = "";
   $("numberFilter").classList.toggle("hidden", context !== "bank");
-  $("reviewEyebrow").textContent = context === "bank" ? "Study mode • no score changes" : "Completed session";
-  $("reviewTitle").textContent = context === "bank" ? "Complete Question Bank" : context === "mistakes" ? "Review Mistakes" : "Review All Answers";
+  $("reviewEyebrow").textContent = context === "bank" ? `${app.activeCourse.code} • Study mode • no score changes` : `${app.activeCourse.code} • Completed session`;
+  $("reviewTitle").textContent = context === "bank" ? `${app.activeCourse.name} Question Bank` : context === "mistakes" ? "Review Mistakes" : "Review All Answers";
   $("answerToggle").textContent = "Hide Answers";
   $("expandButton").textContent = "Expand All";
 
   if (context === "bank") {
-    $("reviewFilter").innerHTML = `<option value="all">All question types</option><option value="single">Single answer</option><option value="multiple">Multiple answer</option><option value="image">Image questions</option>`;
+    const categories = [...new Set(app.questions.map((question) => question.category))];
+    $("reviewFilter").innerHTML = `<option value="all">All questions</option>` + categories.map((category) => `<option value="category:${escapeHtml(category)}">${escapeHtml(category)}</option>`).join("") + `<option value="single">Single answer</option><option value="multiple">Multiple answer</option><option value="image">Image questions</option>`;
   } else {
     $("reviewFilter").innerHTML = `<option value="all">All results</option><option value="first">First-try correct</option><option value="second">Second-try correct</option><option value="missed">Incorrect after two tries</option>`;
   }
@@ -459,6 +568,7 @@ function renderReviewList() {
 
   if (app.reviewContext === "bank") {
     entries = app.questions.map((question, index) => ({ question, displayNumber: index + 1, record: null }));
+    if (filter.startsWith("category:")) entries = entries.filter((entry) => entry.question.category === filter.slice(9));
     if (filter === "single" || filter === "multiple") entries = entries.filter((entry) => entry.question.type === filter);
     if (filter === "image") entries = entries.filter((entry) => Boolean(entry.question.image));
     if (requestedNumber) entries = entries.filter((entry) => entry.displayNumber === requestedNumber);

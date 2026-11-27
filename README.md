@@ -1,14 +1,20 @@
-# CCNA 200-301 Interactive Quiz Reviewer
+# ULTI REVIEWER
 
-A beginner-friendly reviewer for Enterprise Networking, Security, and Automation (ENSA v7.0). It uses plain HTML, CSS, JavaScript, JSON, and browser LocalStorage—no framework or database is required.
+A beginner-friendly multi-course quiz and study website. It uses plain HTML, CSS, JavaScript, JSON, and browser LocalStorage—no framework or database is required.
 
-The included 55 questions and diagram are original practice content. They are not copied from a third-party exam-answer bank. Always add only questions and images that you created or are authorized to use.
+Included subjects:
+
+- **IT0103 Networking** — 55 original CCNA 200-301 ENSA practice questions
+- **GED0083 Fluid and Thermal Physics** — 38 questions from the supplied formative reviewer
+- **IT0035 Operating Systems** — 3 quiz-ready questions from the recoverable formative and seatwork material
+
+The IT0035 source was partial. Items with missing question text or an unverified answer were not invented.
 
 ## Run the website
 
-You can double-click `index.html` to run the reviewer directly. It includes a JavaScript fallback copy of the question bank for browsers that block local JSON requests.
+You can double-click `index.html` to run the reviewer directly. `course-data.js` contains local fallback copies for browsers that block JSON requests.
 
-For normal development, you can also open the folder in Visual Studio Code, install the **Live Server** extension by Ritwick Dey, then right-click `index.html` and choose **Open with Live Server**. Live Server uses `questions.json` directly and usually opens at `http://127.0.0.1:5500`.
+For normal development, you can also open the folder in Visual Studio Code, install the **Live Server** extension by Ritwick Dey, then right-click `index.html` and choose **Open with Live Server**. Live Server uses the JSON question files directly and usually opens at `http://127.0.0.1:5500`.
 
 For GitHub hosting, upload the complete project and enable **GitHub Pages** for the repository. Do not open the file through GitHub's source-code viewer; use the generated `https://username.github.io/repository-name/` Pages address.
 
@@ -16,16 +22,19 @@ For GitHub hosting, upload the complete project and enable **GitHub Pages** for 
 
 - `index.html` — page structure and accessible interface
 - `style.css` — dark responsive design
-- `script.js` — quiz, score, review, keyboard, and saved-progress logic
-- `questions.json` — question bank
-- `questions.js` — local-file fallback mirror of the question bank
+- `script.js` — course navigation, quizzes, scoring, reviews, keyboard controls, and saved progress
+- `course-data.js` — subject catalog and local-file fallback question banks
+- `questions.json` — IT0103 Networking question bank
+- `questions.js` — legacy IT0103 local fallback
+- `data/ged0083.json` — GED0083 question bank
+- `data/it0035.json` — IT0035 question bank
 - `assets/` — authorized diagrams and images
 
 ## Add a question
 
-Add an object to the array in `questions.json`. Every question needs a unique numeric `id` and stable option IDs.
+Add an object to the appropriate course JSON file. Every question needs a unique numeric `id` within that course, stable option IDs, and a `category` used by the Quiz Type selector.
 
-If you want direct double-click (`file://`) mode to include your new question, make the same change inside the `window.QUESTION_BANK` array in `questions.js`. GitHub Pages and Live Server use `questions.json` as the primary source.
+If you want direct double-click (`file://`) mode to include your new question, make the same change inside the matching course's `questions` array in `course-data.js`. GitHub Pages and Live Server use the JSON files as the primary source.
 
 ```json
 {
@@ -41,7 +50,8 @@ If you want direct double-click (`file://`) mode to include your new question, m
   "correctAnswers": ["B"],
   "explanation": "DHCP can provide an IPv4 address, mask, gateway, and other options.",
   "image": null,
-  "source": "Original practice question"
+  "source": "Original practice question",
+  "category": "Addressing Services"
 }
 ```
 
@@ -80,7 +90,7 @@ Only consecutive first-try correct answers increase the streak. A wrong first at
 
 ## Saved progress
 
-The active question order, shuffled option order, attempts, selected answers, counters, streaks, and completion status are stored in browser LocalStorage under `ccnaEnsaReviewerSessionV1`. Refreshing the page keeps the session. **Reset Saved Progress** deletes it after confirmation.
+Each subject saves its own active question order, shuffled option order, attempts, selected answers, counters, streaks, and completion status in browser LocalStorage using the `ultiReviewerSessionV1:` key prefix. Refreshing the page keeps the session. **Reset Saved Progress** deletes only the selected subject's saved quiz after confirmation.
 
 Because LocalStorage belongs to one browser and site address, progress will not automatically move to another browser, device, or Live Server port.
 

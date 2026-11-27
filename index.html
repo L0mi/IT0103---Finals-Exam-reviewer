@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An interactive CCNA 200-301 ENSA v7.0 quiz reviewer.">
-  <title>CCNA 200-301 Interactive Quiz Reviewer</title>
+  <meta name="description" content="ULTI REVIEWER is a multi-course interactive quiz and study website.">
+  <title>ULTI REVIEWER</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,9 +13,9 @@
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <button class="brand-button" id="homeButton" type="button" aria-label="Return to main menu">
-        <span class="brand-mark">C</span>
-        <span><strong>CCNA Reviewer</strong><small>ENSA v7.0</small></span>
+      <button class="brand-button" id="homeButton" type="button" aria-label="Return to subject selection">
+        <span class="brand-mark">U</span>
+        <span><strong>ULTI REVIEWER</strong><small>Multi-course study hub</small></span>
       </button>
       <button class="icon-button" id="soundButton" type="button" aria-label="Toggle feedback sounds" title="Toggle feedback sounds">♪</button>
     </header>
@@ -23,15 +23,34 @@
     <main id="app" tabindex="-1">
       <section class="screen center-screen" id="loadingScreen">
         <div class="loader" aria-hidden="true"></div>
-        <p>Loading the question bank…</p>
+        <p>Loading your courses…</p>
+      </section>
+
+      <section class="screen hidden" id="subjectsScreen">
+        <div class="subject-hero">
+          <div class="eyebrow">One reviewer • Multiple courses</div>
+          <h1>Choose your <span>subject</span></h1>
+          <p>Select a course to open its quiz modes, question bank, and saved progress.</p>
+          <div class="subject-summary" id="subjectSummary"></div>
+        </div>
+        <div class="subject-grid" id="subjectGrid" aria-label="Available course subjects"></div>
       </section>
 
       <section class="screen hidden" id="menuScreen">
+        <div class="course-nav">
+          <button class="button ghost compact" id="changeSubjectButton" type="button">← Change Subject</button>
+          <span id="courseBreadcrumb">Course</span>
+        </div>
         <div class="hero">
-          <div class="eyebrow">Certification practice • No timer</div>
-          <h1>CCNA 200-301<br><span>Interactive Quiz Reviewer</span></h1>
-          <p>Enterprise Networking, Security, and Automation (ENSA v7.0)</p>
-          <div class="availability"><span id="questionCount">0</span> original practice questions available</div>
+          <div class="eyebrow" id="courseEyebrow">Interactive quiz • No timer</div>
+          <h1><span id="courseCodeTitle">Course</span><br><span id="courseNameTitle">Interactive Quiz Reviewer</span></h1>
+          <p id="courseSubtitle">Choose a quiz type and length.</p>
+          <div class="availability"><span id="questionCount">0</span> questions available</div>
+        </div>
+
+        <div class="quiz-type-card">
+          <div><span class="quiz-type-icon">⌘</span><span><strong>Quiz Type</strong><small>Focus on one topic or use a mixed review.</small></span></div>
+          <select id="quizTypeSelect" aria-label="Choose a quiz type"></select>
         </div>
 
         <div class="mode-grid" id="modeGrid" aria-label="Choose a quiz length"></div>
@@ -43,7 +62,7 @@
         </div>
 
         <div class="study-card">
-          <div><span class="study-icon">⌕</span><div><h2>Question Bank Reviewer</h2><p>Browse answers and explanations without affecting your score.</p></div></div>
+          <div><span class="study-icon">⌕</span><div><h2 id="bankCardTitle">Course Question Bank</h2><p>Browse answers and explanations without affecting your score.</p></div></div>
           <button class="button secondary" id="bankButton" type="button">Open Reviewer</button>
         </div>
 
@@ -143,10 +162,11 @@
       </section>
     </main>
 
-    <footer><span>Original educational practice content</span><span>Progress stays on this device</span></footer>
+    <footer><span>ULTI REVIEWER • Multi-course study hub</span><span>Progress stays on this device</span></footer>
   </div>
   <div class="streak-toast hidden" id="streakToast" role="status">🔥 5-answer streak! Great work!</div>
   <script src="questions.js"></script>
+  <script src="course-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
