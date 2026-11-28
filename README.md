@@ -6,9 +6,9 @@ Included subjects:
 
 - **IT0103 Networking** — 55 original CCNA 200-301 ENSA practice questions
 - **GED0083 Fluid and Thermal Physics** — 38 questions from the supplied formative reviewer
-- **IT0035 Operating Systems** — 45 quiz-ready questions covering CPU scheduling, page replacement, mass storage, disk scheduling, protection, and security
+- **IT0035 Operating Systems** — 117 quiz-ready questions covering operating-system fundamentals, process management, CPU scheduling, page replacement, mass storage, disk scheduling, protection, and security
 
-The IT0035 sources are still partial. Items with missing question text or an unverified answer were not invented. One Disk Scheduling answer was recalculated: the final request in the listed SSTF sequence is track 39, although the document highlights track 38. Repeated questions from the expanded Formative 5 material were included only once.
+The IT0035 bank follows the deduplicated master reviewer. Eleven items with missing question text or an unverified answer were excluded, and eight additional repeated or inverse concept questions were reduced to one canonical version. One Disk Scheduling answer was recalculated: the final request in the listed SSTF sequence is track 39, although the document highlights track 38.
 
 ## Run the website
 

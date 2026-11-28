@@ -26,7 +26,7 @@
     ],
     "explanation": "The supplied IT0035 reviewer records 11 ms as the answer.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "CPU Scheduling"
   },
   {
@@ -56,7 +56,7 @@
     ],
     "explanation": "The supplied IT0035 reviewer records 13 ms as the answer.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "CPU Scheduling"
   },
   {
@@ -90,38 +90,30 @@
     ],
     "explanation": "The supplied reviewer notes that recalculation gives 4 hits, which was absent from the originally recorded choices. It is included here so the quiz can be answered correctly.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Page Replacement"
   },
   {
     "id": 4,
-    "question": "Given requests 39, 14, 38, and 17 with the initial head at track 10 on a 100-track disk, which track is served first using SSTF?",
+    "question": "The main requirement of secondary storage is to store very large amounts of data temporarily.",
     "type": "single",
     "options": [
       {
         "id": "A",
-        "text": "14"
+        "text": "True"
       },
       {
         "id": "B",
-        "text": "17"
-      },
-      {
-        "id": "C",
-        "text": "38"
-      },
-      {
-        "id": "D",
-        "text": "39"
+        "text": "False"
       }
     ],
     "correctAnswers": [
-      "A"
+      "B"
     ],
-    "explanation": "Track 14 is only 4 tracks away from the initial head at 10, so SSTF serves it first.",
+    "explanation": "Secondary storage is intended for persistent, nonvolatile storage rather than temporary storage.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
-    "category": "Disk Scheduling"
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Mass Storage Management"
   },
   {
     "id": 5,
@@ -150,7 +142,7 @@
     ],
     "explanation": "LOOK first moves upward from 32. Of the pending higher-numbered requests, 53 is the closest and is served first.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
@@ -180,38 +172,39 @@
     ],
     "explanation": "Track 24 is 8 tracks away from 32, which is the smallest seek among the pending requests.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
     "id": 7,
-    "question": "Using LOOK toward higher tracks for requests 98, 53, 22, 16, and 24, starting at track 32, what is the total head movement?",
-    "type": "single",
+    "question": "Which are operating-system responsibilities in disk management?",
+    "type": "multiple",
     "options": [
       {
         "id": "A",
-        "text": "98 tracks"
+        "text": "Booting from disk"
       },
       {
         "id": "B",
-        "text": "148 tracks"
+        "text": "Booting from tape"
       },
       {
         "id": "C",
-        "text": "132 tracks"
+        "text": "Bad-block recovery"
       },
       {
         "id": "D",
-        "text": "180 tracks"
+        "text": "Booting from system"
       }
     ],
     "correctAnswers": [
-      "B"
+      "A",
+      "C"
     ],
-    "explanation": "The LOOK path is 32 to 53 to 98 to 24 to 22 to 16. Its movement is 21 + 45 + 74 + 2 + 6 = 148 tracks.",
+    "explanation": "The master reviewer marks booting from disk and bad-block recovery as disk-management responsibilities.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
-    "category": "Disk Scheduling"
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Mass Storage Management"
   },
   {
     "id": 8,
@@ -240,7 +233,7 @@
     ],
     "explanation": "FCFS serves requests in the order received, so the first listed request, track 98, is served first.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
@@ -268,9 +261,9 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "SSTF serves the requests in the order 14, 17, 38, 39, so track 39 is last. The supplied reviewer highlights 38, but recalculation gives 39.",
+    "explanation": "SSTF serves 14, 17, 38, then 39, so track 39 is last. The source highlights track 38, but recalculation gives track 39.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document; answer recalculated",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
@@ -292,7 +285,7 @@
     ],
     "explanation": "C-SCAN services requests in one direction, then returns to the other end without servicing requests on the return trip.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
@@ -314,7 +307,7 @@
     ],
     "explanation": "Shortest Seek Time First selects the pending request closest to the current head position.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
@@ -344,7 +337,7 @@
     ],
     "explanation": "A magnetic disk records information on the surfaces of its platters.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -374,7 +367,7 @@
     ],
     "explanation": "A hard disk stores data by magnetically encoding the sector under the read-write head.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -404,7 +397,7 @@
     ],
     "explanation": "A platter is a flat circular disk.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -434,7 +427,7 @@
     ],
     "explanation": "Seek time is the time required to position the read-write head over the desired track.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -464,7 +457,7 @@
     ],
     "explanation": "The supplied reviewer gives a typical range of 4,500 to 7,200 RPM.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -494,7 +487,7 @@
     ],
     "explanation": "The reviewer identifies the magnetic disk as the main source of bulk secondary storage.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -524,7 +517,7 @@
     ],
     "explanation": "In the supplied material, Constant Angular Velocity uses a uniform number of sectors per track.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -554,7 +547,7 @@
     ],
     "explanation": "A head crash happens when the read-write head touches and damages the disk surface.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -584,7 +577,7 @@
     ],
     "explanation": "The supplied reviewer identifies 512 bytes as the usual logical-block size.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -614,7 +607,7 @@
     ],
     "explanation": "A fixed-head system provides a separate read-write head for each track.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Mass Storage Management"
   },
   {
@@ -636,30 +629,38 @@
     ],
     "explanation": "C-SCAN conceptually treats the disk as circular so service continues in one direction after wrapping around.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
     "id": 23,
-    "question": "True or False: SSTF selects the request with the maximum seek time from the current head position.",
+    "question": "In a bit vector, what value represents a block that is not free?",
     "type": "single",
     "options": [
       {
         "id": "A",
-        "text": "True"
+        "text": "3"
       },
       {
         "id": "B",
-        "text": "False"
+        "text": "1"
+      },
+      {
+        "id": "C",
+        "text": "0"
+      },
+      {
+        "id": "D",
+        "text": "2"
       }
     ],
     "correctAnswers": [
       "B"
     ],
-    "explanation": "SSTF selects the request with the minimum seek time, so the statement is false.",
+    "explanation": "The master reviewer uses 1 to mark a block that is not free.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
-    "category": "Disk Scheduling"
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Mass Storage Management"
   },
   {
     "id": 24,
@@ -680,7 +681,7 @@
     ],
     "explanation": "First Come First Served processes requests in queue-arrival order.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
@@ -710,7 +711,7 @@
     ],
     "explanation": "LOOK moves upward through 14, 17, 38, and 39. The total movement is 39 - 10 = 29 tracks.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Disk Scheduling"
   },
   {
@@ -740,38 +741,30 @@
     ],
     "explanation": "Authentication is a resistance or access-control strategy, while the other options support service recovery.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
     "id": 27,
-    "question": "Which option does not belong to the key property \"Recovery of essential and full services after attack\"?",
+    "question": "Floppy disks have a coated surface that the read-write head scans directly without destroying the data.",
     "type": "single",
     "options": [
       {
         "id": "A",
-        "text": "Authentication"
+        "text": "True"
       },
       {
         "id": "B",
-        "text": "All of these"
-      },
-      {
-        "id": "C",
-        "text": "Intrusion detection"
-      },
-      {
-        "id": "D",
-        "text": "Encryption"
+        "text": "False"
       }
     ],
     "correctAnswers": [
-      "B"
+      "A"
     ],
-    "explanation": "Authentication, intrusion detection, and encryption do not directly provide recovery of essential and full services, so the supplied answer is All of these.",
+    "explanation": "The master reviewer marks this statement as true.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
-    "category": "Protection and Security"
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Mass Storage Management"
   },
   {
     "id": 28,
@@ -800,7 +793,7 @@
     ],
     "explanation": "The supplied reviewer classifies an internet-connected LAN as high risk.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -822,7 +815,7 @@
     ],
     "explanation": "Sniffers can capture network traffic and are a vulnerability, so the statement is false.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -852,7 +845,7 @@
     ],
     "explanation": "The supplied reviewer classifies a LAN without internet access as medium risk.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -874,7 +867,7 @@
     ],
     "explanation": "Windows 10 is a desktop operating system in this context, not a hand-held operating system.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -904,7 +897,7 @@
     ],
     "explanation": "Contingency planning prepares an organization to restore essential services after an attack.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -934,7 +927,7 @@
     ],
     "explanation": "Regular user training helps ensure that security policies and procedures are understood and followed.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -964,7 +957,7 @@
     ],
     "explanation": "The reviewer identifies viruses, e-mail, and spoofing as vulnerabilities, so All of these is correct.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -994,7 +987,7 @@
     ],
     "explanation": "Authentication helps resist attacks by verifying the identity of users or systems before granting access.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -1016,7 +1009,7 @@
     ],
     "explanation": "Spear-phishing uses tailored messages aimed at a specific target.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -1046,12 +1039,12 @@
     ],
     "explanation": "A time bomb is designed to activate at a specified time.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
     "id": 38,
-    "question": "True or False: Ransomware is similar to smishing because victims receive a voice message directing them to a phone number or website.",
+    "question": "Magnetic tape is one of the earliest secondary-storage media.",
     "type": "single",
     "options": [
       {
@@ -1064,12 +1057,12 @@
       }
     ],
     "correctAnswers": [
-      "B"
+      "A"
     ],
-    "explanation": "Voice-based phishing is vishing, not ransomware, so the statement is false.",
+    "explanation": "Magnetic tape is one of the earliest forms of secondary storage.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
-    "category": "Protection and Security"
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Mass Storage Management"
   },
   {
     "id": 39,
@@ -1090,7 +1083,7 @@
     ],
     "explanation": "A boot-sector virus targets the boot record or system area of a storage device.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -1120,7 +1113,7 @@
     ],
     "explanation": "Trash collection involves searching discarded materials for information that can help compromise a system.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -1142,7 +1135,7 @@
     ],
     "explanation": "Antivirus software cannot guarantee removal of every possible threat, so the statement is false.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -1164,7 +1157,7 @@
     ],
     "explanation": "Sniffers monitor or capture network traffic from a connected computer.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -1186,7 +1179,7 @@
     ],
     "explanation": "Vishing is voice-based phishing and commonly uses calls or voice messages.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -1208,7 +1201,7 @@
     ],
     "explanation": "The supplied reviewer marks this statement as true.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
   },
   {
@@ -1238,8 +1231,1881 @@
     ],
     "explanation": "Spoofing disguises a communication or identity so it appears to come from a trusted source.",
     "image": null,
-    "source": "IT0035 Formatives and Seatworks Reviewer F5/F6 Updated document",
+    "source": "IT0035 Master Reviewer No Duplicates document",
     "category": "Protection and Security"
+  },
+  {
+    "id": 46,
+    "question": "How many bits represent each block in a bit vector?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "quadruple bit"
+      },
+      {
+        "id": "B",
+        "text": "triple bit"
+      },
+      {
+        "id": "C",
+        "text": "double bit"
+      },
+      {
+        "id": "D",
+        "text": "single bit"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "A bit vector uses one bit for each storage block.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Mass Storage Management"
+  },
+  {
+    "id": 47,
+    "question": "Using LOOK toward higher tracks, what is the last served request? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "track 23"
+      },
+      {
+        "id": "B",
+        "text": "track 99"
+      },
+      {
+        "id": "C",
+        "text": "track 32"
+      },
+      {
+        "id": "D",
+        "text": "track 39"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "LOOK first services higher requests, then reverses; track 23 is served last.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 48,
+    "question": "Using LOOK toward lower tracks, what is the total head movement? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "93 tracks"
+      },
+      {
+        "id": "B",
+        "text": "94 tracks"
+      },
+      {
+        "id": "C",
+        "text": "90 tracks"
+      },
+      {
+        "id": "D",
+        "text": "95 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The LOOK path is 50 to 42 to 32 to 23 to 87 to 89, totaling 93 tracks.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 49,
+    "question": "Using SSTF, what is the first served request? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "track 89"
+      },
+      {
+        "id": "B",
+        "text": "track 42"
+      },
+      {
+        "id": "C",
+        "text": "track 32"
+      },
+      {
+        "id": "D",
+        "text": "track 0"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Track 42 is closest to the initial head at 50.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 50,
+    "question": "Using SSTF, what is the last served request? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "track 99"
+      },
+      {
+        "id": "B",
+        "text": "track 0"
+      },
+      {
+        "id": "C",
+        "text": "track 87"
+      },
+      {
+        "id": "D",
+        "text": "track 89"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Following the shortest seek at each step leaves track 89 for last.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 51,
+    "question": "Using SCAN toward track 0, what is the total head movement? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "139 tracks"
+      },
+      {
+        "id": "B",
+        "text": "148 tracks"
+      },
+      {
+        "id": "C",
+        "text": "140 tracks"
+      },
+      {
+        "id": "D",
+        "text": "138 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer gives 139 tracks for this SCAN path.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 52,
+    "question": "Using LOOK toward higher tracks, what is the first served request? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "track 99"
+      },
+      {
+        "id": "B",
+        "text": "track 24"
+      },
+      {
+        "id": "C",
+        "text": "track 87"
+      },
+      {
+        "id": "D",
+        "text": "track 100"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "LOOK moving upward first reaches track 87.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 53,
+    "question": "Using SSTF, what is the total head movement? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "93 tracks"
+      },
+      {
+        "id": "B",
+        "text": "130 tracks"
+      },
+      {
+        "id": "C",
+        "text": "94 tracks"
+      },
+      {
+        "id": "D",
+        "text": "95 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer gives 93 tracks of total head movement.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 54,
+    "question": "Using FCFS, what is the total head movement? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "130 tracks"
+      },
+      {
+        "id": "B",
+        "text": "205 tracks"
+      },
+      {
+        "id": "C",
+        "text": "98 tracks"
+      },
+      {
+        "id": "D",
+        "text": "204 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Serving the requests in their listed order produces 205 tracks of movement.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 55,
+    "question": "Using FCFS, what is the total head movement? Requests: 5, 16, 13, 30, 46; initial head: 25; tracks: 0-49.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "67 tracks"
+      },
+      {
+        "id": "B",
+        "text": "70 tracks"
+      },
+      {
+        "id": "C",
+        "text": "68 tracks"
+      },
+      {
+        "id": "D",
+        "text": "69 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Serving the requests in their listed order produces 67 tracks of movement.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 56,
+    "question": "Using SSTF, what is the total head movement? Requests: 5, 16, 13, 30, 46; initial head: 25; tracks: 0-49.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "70 tracks"
+      },
+      {
+        "id": "B",
+        "text": "73 tracks"
+      },
+      {
+        "id": "C",
+        "text": "72 tracks"
+      },
+      {
+        "id": "D",
+        "text": "71 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "The master reviewer gives 71 tracks of total head movement.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 57,
+    "question": "Using LOOK toward lower tracks, what is the total head movement? Requests: 5, 16, 13, 30, 46; initial head: 25; tracks: 0-49.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "70 tracks"
+      },
+      {
+        "id": "B",
+        "text": "61 tracks"
+      },
+      {
+        "id": "C",
+        "text": "72 tracks"
+      },
+      {
+        "id": "D",
+        "text": "71 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "The master reviewer gives 61 tracks of total head movement.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 58,
+    "question": "Using C-SCAN toward lower tracks, what is the farthest distance between two tracks? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "39 tracks"
+      },
+      {
+        "id": "B",
+        "text": "99 tracks"
+      },
+      {
+        "id": "C",
+        "text": "100 tracks"
+      },
+      {
+        "id": "D",
+        "text": "101 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Wrapping between the disk ends spans 99 tracks on a 0-99 disk.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 59,
+    "question": "Using C-SCAN toward lower tracks, what is the total head movement? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "161 tracks"
+      },
+      {
+        "id": "B",
+        "text": "130 tracks"
+      },
+      {
+        "id": "C",
+        "text": "180 tracks"
+      },
+      {
+        "id": "D",
+        "text": "192 tracks"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "The master reviewer gives 180 tracks of total head movement.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 60,
+    "question": "Using SCAN toward track 0, what is the last served request? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "track 0"
+      },
+      {
+        "id": "B",
+        "text": "track 87"
+      },
+      {
+        "id": "C",
+        "text": "track 99"
+      },
+      {
+        "id": "D",
+        "text": "track 89"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "After reaching the lower end and reversing, track 89 is the last request served.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 61,
+    "question": "Using SCAN toward track 0, what is the first request served from the initial head? Requests: 23, 89, 32, 42, 87; initial head: 50; tracks: 0-99.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "track 32"
+      },
+      {
+        "id": "B",
+        "text": "track 42"
+      },
+      {
+        "id": "C",
+        "text": "track 24"
+      },
+      {
+        "id": "D",
+        "text": "track 87"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Moving downward from 50, the first pending request encountered is track 42.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Disk Scheduling"
+  },
+  {
+    "id": 62,
+    "question": "System vulnerabilities include which of the following?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "vulnerable firewalls"
+      },
+      {
+        "id": "B",
+        "text": "e-mail exchange"
+      },
+      {
+        "id": "C",
+        "text": "all of these"
+      },
+      {
+        "id": "D",
+        "text": "file downloads"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "All listed items can expose a system to vulnerabilities.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 63,
+    "question": "Repeated trials means attempting to enter a system by guessing authentic passwords.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Repeated password guesses are repeated trials.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 64,
+    "question": "The ease of protecting a LAN without internet access is medium.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer classifies its ease of protection as medium.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 65,
+    "question": "The less complex and weak an operating system is, the more vulnerable it is to attacks.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "The master reviewer marks this statement as false.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 66,
+    "question": "A virus must be self-executing and self-replicating.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer marks both properties as characteristics of a virus.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 67,
+    "question": "Which phishing method uses Short Message Service (SMS) texting?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Smising"
+      },
+      {
+        "id": "B",
+        "text": "Smishine"
+      },
+      {
+        "id": "C",
+        "text": "Smithing"
+      },
+      {
+        "id": "D",
+        "text": "Smishing"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Smishing is phishing conducted through SMS messages.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 68,
+    "question": "Authentication is a strategy for the key property \"Recognition of attacks and resulting damages.\"",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Authentication supports resistance and access control rather than attack recognition.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 69,
+    "question": "\"Recognition of attacks and resulting damage\" is a key property of a survivable system.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Attack recognition and damage assessment are key survivability properties.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 70,
+    "question": "Authentication verifies that an individual trying to access a system is authorized.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Authentication confirms the identity and authorization of a user or system.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 71,
+    "question": "A virus is an unintentional attack.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "A virus is malicious code and therefore an intentional threat.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 72,
+    "question": "Unintentional intrusions are security breaches or data changes that do not result from a planned intrusion.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "This matches the definition given in the master reviewer.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 73,
+    "question": "The ease of protecting a single computer without e-mail or internet access is high.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer classifies its ease of protection as high.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 74,
+    "question": "\"Recovery of essential services after an attack\" is a key property of a survivable system.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Service recovery is one of the key survivability properties.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 75,
+    "question": "Wiretapping occurs when unauthorized users monitor or modify a user's transmission.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Wiretapping involves unauthorized interception or modification of communications.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 76,
+    "question": "System administrators must equip operating systems with available defenses against attacks.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer marks this defensive responsibility as true.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 77,
+    "question": "\"Recovery of essential and full services after attack\" means only \"strategies for limiting damage.\"",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Limiting damage and recovering services are separate survivability properties.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Protection and Security"
+  },
+  {
+    "id": 78,
+    "question": "Android is an example of a handheld operating system.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Android is widely used on handheld smartphones and tablets.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 79,
+    "question": "A user of a batch operating system directly interacts with the computer while jobs run.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Batch systems execute submitted jobs without direct user interaction during processing.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 80,
+    "question": "Which is not application software?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Microsoft Word"
+      },
+      {
+        "id": "B",
+        "text": "Adobe Photoshop"
+      },
+      {
+        "id": "C",
+        "text": "Windows 10"
+      },
+      {
+        "id": "D",
+        "text": "Google Chrome"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Windows 10 is an operating system, not application software.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 81,
+    "question": "A distributed system is also known as a tightly coupled system.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Distributed systems are commonly described as loosely coupled systems.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 82,
+    "question": "An operating system must be able to load a program into memory and execute it.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Program loading and execution are core operating-system services.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 83,
+    "question": "A time-sharing operating system creates an interactive environment.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Time-sharing allows users to interact with running programs.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 84,
+    "question": "A cold boot is also known as a reboot or reset.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "A reboot or reset is a warm boot; a cold boot starts from a powered-off state.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 85,
+    "question": "Which program loads and starts the boot-time tasks and processes of an operating system?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bootloader"
+      },
+      {
+        "id": "B",
+        "text": "Compiler"
+      },
+      {
+        "id": "C",
+        "text": "Scheduler"
+      },
+      {
+        "id": "D",
+        "text": "Shell"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The bootloader loads the operating system and begins its startup process.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 86,
+    "question": "Cloud computing is an example of a distributed system.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Cloud services rely on distributed computing resources.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 87,
+    "question": "The kernel acts as a bridge between applications and computer hardware.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The kernel manages hardware resources and provides services to applications.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 88,
+    "question": "A private cloud is operated by a company for its own use.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A private cloud is dedicated to one organization.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 89,
+    "question": "What do device controllers use to inform the CPU that an I/O operation has completed?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Interrupt"
+      },
+      {
+        "id": "B",
+        "text": "Buffer"
+      },
+      {
+        "id": "C",
+        "text": "Cache"
+      },
+      {
+        "id": "D",
+        "text": "System call"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A device controller signals completion by generating an interrupt.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 90,
+    "question": "A buffer permanently holds data while it is being moved.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "A buffer temporarily holds data during transfer.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 91,
+    "question": "What type of operating system is available in source-code form with copyleft licensing?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Open-source OS"
+      },
+      {
+        "id": "B",
+        "text": "Proprietary OS"
+      },
+      {
+        "id": "C",
+        "text": "Batch OS"
+      },
+      {
+        "id": "D",
+        "text": "Real-time OS"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Open-source operating systems make source code available under open or copyleft licenses.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 92,
+    "question": "Which interrupt system lets the requesting device identify the handler or vector to the operating system?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Vectored Interrupt System"
+      },
+      {
+        "id": "B",
+        "text": "Polling System"
+      },
+      {
+        "id": "C",
+        "text": "Non-vectored Interrupt System"
+      },
+      {
+        "id": "D",
+        "text": "Direct Memory Access"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A vectored interrupt supplies information that identifies the appropriate handler.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 93,
+    "question": "What interface allows programs to request services from the operating system?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "System call"
+      },
+      {
+        "id": "B",
+        "text": "Bootloader"
+      },
+      {
+        "id": "C",
+        "text": "Cache line"
+      },
+      {
+        "id": "D",
+        "text": "Device register"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Programs use system calls to request operating-system services.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 94,
+    "question": "What type of interrupt is caused by an action taken by a hardware device?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Hardware interrupt"
+      },
+      {
+        "id": "B",
+        "text": "Software interrupt"
+      },
+      {
+        "id": "C",
+        "text": "System call"
+      },
+      {
+        "id": "D",
+        "text": "Process state"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A hardware device generates a hardware interrupt.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 95,
+    "question": "Increased throughput means completing more work in more time.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Higher throughput means more work completed per unit of time.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 96,
+    "question": "Dual-mode operation allows an operating system to protect itself and other system components.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "User and kernel modes restrict privileged operations and protect the system.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 97,
+    "question": "What is computing on handheld smartphones and tablet computers called?",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mobile Computing"
+      },
+      {
+        "id": "B",
+        "text": "Batch Computing"
+      },
+      {
+        "id": "C",
+        "text": "Mainframe Computing"
+      },
+      {
+        "id": "D",
+        "text": "Grid Scheduling"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Computing on smartphones and tablets is mobile computing.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Operating System Fundamentals"
+  },
+  {
+    "id": 98,
+    "question": "A program stored on disk is an active entity.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "A program on disk is passive; a process in execution is active.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 99,
+    "question": "The ready state means a process is waiting for an event such as I/O completion.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "A ready process is waiting for CPU time; a waiting process is waiting for an event.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 100,
+    "question": "The running state means a process is being created.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "A running process is executing instructions; a new process is being created.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 101,
+    "question": "Restricting a child process to a subset of its parent's resources helps prevent system overload.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Resource limits keep child processes from exhausting system resources.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 102,
+    "question": "The TEXT section contains the current activity, program counter, and processor registers.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "The text section contains executable code; current activity and registers belong to process state or context.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 103,
+    "question": "The waiting state means a process is waiting for an event to occur.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "A waiting or blocked process cannot proceed until an event occurs.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 104,
+    "question": "The medium-term scheduler selects ready processes and allocates the CPU.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "The short-term scheduler selects a ready process for CPU execution.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 105,
+    "question": "Operating-system processes execute system code.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Operating-system processes perform system functions and execute system code.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 106,
+    "question": "Process execution begins with an I/O burst followed by a CPU burst.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "A process generally begins with a CPU burst and alternates between CPU and I/O bursts.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 107,
+    "question": "A parent may terminate a child process when the parent is exiting.",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "True"
+      },
+      {
+        "id": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Some systems terminate child processes when the parent exits.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "Process Management"
+  },
+  {
+    "id": 108,
+    "question": "Using non-preemptive priority scheduling, what is the waiting time of Process A? Processes: P1(arrival 0, burst 5, priority 1), P2(arrival 1, burst 3, priority 2), P3(arrival 2, burst 8, priority 1), P4(arrival 3, burst 6, priority 3).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "0 ms"
+      },
+      {
+        "id": "B",
+        "text": "1 ms"
+      },
+      {
+        "id": "C",
+        "text": "3 ms"
+      },
+      {
+        "id": "D",
+        "text": "5 ms"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Process A starts immediately, so its waiting time is 0 ms.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 109,
+    "question": "Using FCFS, what is the waiting time of Process A? Processes: A(arrival 0, burst 5), B(arrival 1, burst 3), C(arrival 2, burst 8), D(arrival 3, burst 6).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "0 ms"
+      },
+      {
+        "id": "B",
+        "text": "1 ms"
+      },
+      {
+        "id": "C",
+        "text": "3 ms"
+      },
+      {
+        "id": "D",
+        "text": "5 ms"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Process A arrives first and starts immediately, so its waiting time is 0 ms.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 110,
+    "question": "Using non-preemptive Shortest Job First, what is the correct process sequence? Processes: A(arrival 0, burst 5), B(arrival 1, burst 3), C(arrival 2, burst 8), D(arrival 3, burst 6).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "A-B-D-C"
+      },
+      {
+        "id": "B",
+        "text": "A-D-B-C"
+      },
+      {
+        "id": "C",
+        "text": "B-A-D-C"
+      },
+      {
+        "id": "D",
+        "text": "A-B-C-D"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer gives the sequence A-B-D-C.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 111,
+    "question": "Using non-preemptive priority scheduling, which process has no waiting time? All arrive at 0 ms. A(burst 5, priority 3), B(burst 1, priority 4), C(burst 8, priority 2), D(burst 3, priority 1).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "A"
+      },
+      {
+        "id": "B",
+        "text": "B"
+      },
+      {
+        "id": "C",
+        "text": "C"
+      },
+      {
+        "id": "D",
+        "text": "D"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Process D has the highest priority and begins immediately.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 112,
+    "question": "Using non-preemptive Shortest Job First, what is the turnaround time of Process A? Processes: A(arrival 0, burst 5), B(arrival 1, burst 3), C(arrival 2, burst 8), D(arrival 3, burst 6).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "5 ms"
+      },
+      {
+        "id": "B",
+        "text": "8 ms"
+      },
+      {
+        "id": "C",
+        "text": "11 ms"
+      },
+      {
+        "id": "D",
+        "text": "14 ms"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer gives Process A a turnaround time of 5 ms.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 113,
+    "question": "Using Round Robin with a 3 ms time quantum, what is the waiting time of P1? Processes: P1(arrival 0, burst 5), P2(arrival 1, burst 3), P3(arrival 2, burst 8), P4(arrival 3, burst 6).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "9 ms"
+      },
+      {
+        "id": "B",
+        "text": "6 ms"
+      },
+      {
+        "id": "C",
+        "text": "11 ms"
+      },
+      {
+        "id": "D",
+        "text": "14 ms"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer gives P1 a waiting time of 9 ms.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 114,
+    "question": "Using preemptive priority scheduling, which process has a turnaround time of 19 ms? Processes: P1(arrival 0, burst 5, priority 1), P2(arrival 1, burst 3, priority 2), P3(arrival 2, burst 8, priority 1), P4(arrival 3, burst 6, priority 3).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "P1"
+      },
+      {
+        "id": "B",
+        "text": "P2"
+      },
+      {
+        "id": "C",
+        "text": "P3"
+      },
+      {
+        "id": "D",
+        "text": "P4"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "The master reviewer identifies P4.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 115,
+    "question": "Using Shortest Remaining Time, what is the average turnaround time? Processes: P1(arrival 0, burst 5), P2(arrival 1, burst 3), P3(arrival 2, burst 8), P4(arrival 3, burst 6).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "8.5 ms"
+      },
+      {
+        "id": "B",
+        "text": "9.5 ms"
+      },
+      {
+        "id": "C",
+        "text": "10.5 ms"
+      },
+      {
+        "id": "D",
+        "text": "11.5 ms"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "The master reviewer gives an average turnaround time of 10.5 ms.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 116,
+    "question": "Using Round Robin with a 3 ms time quantum, which process has a turnaround time of 14 ms? Processes: P1(arrival 0, burst 5), P2(arrival 1, burst 3), P3(arrival 2, burst 8), P4(arrival 3, burst 6).",
+    "type": "single",
+    "options": [
+      {
+        "id": "A",
+        "text": "P1"
+      },
+      {
+        "id": "B",
+        "text": "P2"
+      },
+      {
+        "id": "C",
+        "text": "P3"
+      },
+      {
+        "id": "D",
+        "text": "P4"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "The master reviewer identifies P1.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
+  },
+  {
+    "id": 117,
+    "question": "Using preemptive priority scheduling, which two processes correspond to the recorded 12 ms waiting time and 11 ms turnaround time? Processes: P1(arrival 0, burst 5, priority 1), P2(arrival 1, burst 3, priority 2), P3(arrival 2, burst 8, priority 1), P4(arrival 3, burst 6, priority 3).",
+    "type": "multiple",
+    "options": [
+      {
+        "id": "A",
+        "text": "P1"
+      },
+      {
+        "id": "B",
+        "text": "P2"
+      },
+      {
+        "id": "C",
+        "text": "P3"
+      },
+      {
+        "id": "D",
+        "text": "P4"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "explanation": "The master reviewer records P2 and P3 as the required pair.",
+    "image": null,
+    "source": "IT0035 Master Reviewer No Duplicates document",
+    "category": "CPU Scheduling"
   }
 ]
 
